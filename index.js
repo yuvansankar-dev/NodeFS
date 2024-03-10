@@ -18,6 +18,6 @@ app.get("/write-file", (req, res) => {
 });
 
 app.get("/read-file", (req, res) => {
-  const data = fs.readFileSync(path);
+  const data = fs.readFileSync(path, "utf8");
   res.send(data);
 });
